@@ -1,0 +1,14 @@
+name: PR Auto with Fireworks
+
+on:
+  pull_request:
+    types: [opened, edited, synchronize]
+
+jobs:
+  pr-auto:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Generate PR Description using Fireworks
+        uses: vblagoje/pr-auto@main
+        with:
+          fireworks-api-key: ${{ secrets.FIREWORKS_API_KEY }}

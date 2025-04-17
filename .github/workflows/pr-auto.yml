@@ -1,4 +1,4 @@
-name: PR Auto with Fireworks
+name: PR Auto with Together.ai
 
 on:
   pull_request:
@@ -8,7 +8,9 @@ jobs:
   pr-auto:
     runs-on: ubuntu-latest
     steps:
-      - name: Generate PR Description using Fireworks
+      - name: Generate PR Description using Together.ai
         uses: vblagoje/pr-auto@main
         with:
-          fireworks-api-key: ${{ secrets.FIREWORKS_API_KEY }}
+          openai_api_key: ${{ secrets.TOGETHER_API_KEY }}
+          openai_base_url: https://api.together.xyz/v1
+          args: --generation_model mistralai/Mixtral-8x7B-Instruct-v0.1

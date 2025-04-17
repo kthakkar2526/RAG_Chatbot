@@ -13,4 +13,4 @@ jobs:
         with:
           openai_api_key: ${{ secrets.TOGETHER_API_KEY }}
           openai_base_url: https://api.together.xyz/v1
-          generation_model: mistralai/Mixtral-8x7B-Instruct-v0.1
+          args: --generation_model mistralai/Mixtral-8x7B-Instruct-v0.1

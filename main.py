@@ -82,3 +82,5 @@ async def clear_database():
     chroma_client.delete_collection(
         name="pdf_knowledge_base") 
     return {"message": "Database cleared successfully!"}
+
+# Just testing PR Auto 

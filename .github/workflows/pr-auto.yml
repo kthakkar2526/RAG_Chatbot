@@ -11,4 +11,5 @@ jobs:
       - name: Generate PR Description using Fireworks
         uses: vblagoje/pr-auto@main
         with:
-          fireworks-api-key: ${{ secrets.FIREWORKS_API_KEY }}
+          openai-api-key: ${{ secrets.FIREWORKS_API_KEY }}
+          openai-base-url: https://api.fireworks.ai/inference/v1
